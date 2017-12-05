@@ -1,4 +1,6 @@
-1	German	x-vnd.przemub.Weather	3662372937
+1	German	x-vnd.przemub.Weather	3636526709
+Open Weather	DeskbarView		Open Weather
+Remove from deskbar	DeskbarView		Remove from deskbar
 About Weather	ForecastView		Über Wetter
 Background	ForecastView		Hintergrund
 Blowing snow	ForecastView		Schneegestöber
@@ -52,6 +54,7 @@ Transparent	ForecastView		Transparent
 Tropical storm	ForecastView		Tropischer Sturm
 Weather (The Replicant version)	ForecastView		Wetter (die Replikant Version)
 Windy	ForecastView		Windig
+Add to deskbar	MainWindow		Add to deskbar
 Change location…	MainWindow		Standort ändern…
 Edit	MainWindow		Bearbeiten
 Loading…	MainWindow		Lade Daten…

@@ -1,4 +1,6 @@
-1	Ukrainian	x-vnd.przemub.Weather	3662372937
+1	Ukrainian	x-vnd.przemub.Weather	3636526709
+Open Weather	DeskbarView		Open Weather
+Remove from deskbar	DeskbarView		Remove from deskbar
 About Weather	ForecastView		Про Погоду
 Background	ForecastView		Background
 Blowing snow	ForecastView		Blowing snow
@@ -52,6 +54,7 @@ Transparent	ForecastView		Transparent
 Tropical storm	ForecastView		Tropical storm
 Weather (The Replicant version)	ForecastView		Погода (реплікант)
 Windy	ForecastView		Windy
+Add to deskbar	MainWindow		Add to deskbar
 Change location…	MainWindow		Змінити розташування…
 Edit	MainWindow		Редагувати
 Loading…	MainWindow		Завантаження…

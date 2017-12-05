@@ -1,4 +1,6 @@
-1	Spanish	x-vnd.przemub.Weather	3662372937
+1	Spanish	x-vnd.przemub.Weather	3636526709
+Open Weather	DeskbarView		Open Weather
+Remove from deskbar	DeskbarView		Remove from deskbar
 About Weather	ForecastView		Acerca de Clima
 Background	ForecastView		Background
 Blowing snow	ForecastView		Blowing snow
@@ -52,6 +54,7 @@ Transparent	ForecastView		Transparent
 Tropical storm	ForecastView		Tropical storm
 Weather (The Replicant version)	ForecastView		Clima (versión replicante)
 Windy	ForecastView		Windy
+Add to deskbar	MainWindow		Add to deskbar
 Change location…	MainWindow		Cambiar ubicación…
 Edit	MainWindow		Editar
 Loading…	MainWindow		Cargando…

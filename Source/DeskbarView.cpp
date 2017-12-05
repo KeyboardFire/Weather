@@ -1,4 +1,5 @@
 #include <Bitmap.h>
+#include <Catalog.h>
 #include <Deskbar.h>
 #include <MenuItem.h>
 #include <NodeInfo.h>
@@ -6,6 +7,9 @@
 #include <Roster.h>
 
 #include "DeskbarView.h"
+
+#undef B_TRANSLATION_CONTEXT
+#define B_TRANSLATION_CONTEXT "DeskbarView"
 
 extern const char* kSignature;
 const char* kDeskbarItemName = "Weather";
@@ -91,9 +95,9 @@ void DeskbarView::MouseDown(BPoint point)
 	menu->SetAsyncAutoDestruct(true);
 	menu->SetFont(be_plain_font);
 
-	menu->AddItem(new BMenuItem("Open Weather",
+	menu->AddItem(new BMenuItem(B_TRANSLATE("Open Weather"),
 		new BMessage(kOpenApplication)));
-	menu->AddItem(new BMenuItem("Remove from deskbar",
+	menu->AddItem(new BMenuItem(B_TRANSLATE("Remove from deskbar"),
 		new BMessage(kRemoveReplicant)));
 
 	menu->SetTargetForItems(this);

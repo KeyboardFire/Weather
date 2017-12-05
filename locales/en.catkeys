@@ -1,4 +1,6 @@
-1	English	x-vnd.przemub.Weather	3662372937
+1	English	x-vnd.przemub.Weather	3636526709
+Open Weather	DeskbarView		Open Weather
+Remove from deskbar	DeskbarView		Remove from deskbar
 About Weather	ForecastView		About Weather
 Background	ForecastView		Background
 Blowing snow	ForecastView		Blowing snow
@@ -52,6 +54,7 @@ Transparent	ForecastView		Transparent
 Tropical storm	ForecastView		Tropical storm
 Weather (The Replicant version)	ForecastView		Weather (The Replicant version)
 Windy	ForecastView		Windy
+Add to deskbar	MainWindow		Add to deskbar
 Change location…	MainWindow		Change location…
 Edit	MainWindow		Edit
 Loading…	MainWindow		Loading…

@@ -1,4 +1,6 @@
-1	Italiano	x-vnd.przemub.Weather	3662372937
+1	Italiano	x-vnd.przemub.Weather	3636526709
+Open Weather	DeskbarView		Open Weather
+Remove from deskbar	DeskbarView		Remove from deskbar
 About Weather	ForecastView		Informazioni su Meteo
 Background	ForecastView		Sfondo
 Blowing snow	ForecastView		Bufera di neve
@@ -52,6 +54,7 @@ Transparent	ForecastView		Trasparente
 Tropical storm	ForecastView		Tempesta tropicale
 Weather (The Replicant version)	ForecastView		Meteo (versione replicante)
 Windy	ForecastView		Ventoso
+Add to deskbar	MainWindow		Add to deskbar
 Change location…	MainWindow		Cambia località…
 Edit	MainWindow		Modifica
 Loading…	MainWindow		Caricamento…
