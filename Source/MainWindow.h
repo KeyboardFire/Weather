@@ -27,6 +27,7 @@
 const BRect kDefaultMainWindowRect = BRect(150,150,0,0);
 const uint32 kCitySelectionMessage = 'SelC';
 const uint32 kOpenPreferencesMessage = 'OPrf';
+const uint32 kDeskbarMessage = 'DBar';
 
 class MainWindow : public BWindow {
 public:

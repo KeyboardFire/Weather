@@ -21,6 +21,7 @@
 #include <UrlProtocolRoster.h>
 #include <UrlRequest.h>
 
+#include "DeskbarView.h"
 #include "MainWindow.h"
 #include "NetListener.h"
 #include "PreferencesWindow.h"
@@ -49,6 +50,8 @@ MainWindow::_PrepareMenuBar(void)
 	//menu->AddSeparatorItem();
 	menu->AddItem(new BMenuItem(B_TRANSLATE("Refresh"),
 		new BMessage(kUpdateMessage), 'R'));
+	menu->AddItem(new BMenuItem(B_TRANSLATE("Add to deskbar"),
+		new BMessage(kDeskbarMessage), 'D'));
 	menubar->AddItem(menu);
 
 	return menubar;
@@ -111,6 +114,9 @@ MainWindow::MessageReceived(BMessage *msg)
 			fForecastView->SetCondition(B_TRANSLATE("Loading" B_UTF8_ELLIPSIS));
 			fForecastView->Reload();
 		}
+		break;
+	case kDeskbarMessage:
+		DeskbarView::AddToDeskbar();
 		break;
 	case kShowForecastMessage: {
 		bool show = !fForecastView->ShowForecast();
