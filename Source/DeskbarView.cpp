@@ -10,6 +10,7 @@
 extern const char* kSignature;
 const char* kDeskbarItemName = "Weather";
 
+const uint32 kOpenApplication = 'open';
 const uint32 kRemoveReplicant = 'rmDb';
 
 BView* instantiate_deskbar_item()
@@ -71,6 +72,9 @@ void DeskbarView::Draw(BRect rect)
 void DeskbarView::MessageReceived(BMessage* msg)
 {
 	switch (msg->what) {
+		case kOpenApplication:
+			be_roster->Launch(kSignature);
+			break;
 		case kRemoveReplicant:
 		{
 			BDeskbar deskbar;
@@ -87,6 +91,8 @@ void DeskbarView::MouseDown(BPoint point)
 	menu->SetAsyncAutoDestruct(true);
 	menu->SetFont(be_plain_font);
 
+	menu->AddItem(new BMenuItem("Open Weather",
+		new BMessage(kOpenApplication)));
 	menu->AddItem(new BMenuItem("Remove from deskbar",
 		new BMessage(kRemoveReplicant)));
 
