@@ -16,6 +16,7 @@ public:
 	static void			AddToDeskbar();
 	void				AttachedToWindow();
 	void				Draw(BRect rect);
+	void				MessageReceived(BMessage* msg);
 	void				MouseDown(BPoint point);
 	static DeskbarView*	Instantiate(BMessage* archive);
 

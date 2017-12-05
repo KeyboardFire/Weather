@@ -1,13 +1,16 @@
 #include <Bitmap.h>
 #include <Deskbar.h>
+#include <MenuItem.h>
 #include <NodeInfo.h>
+#include <PopUpMenu.h>
 #include <Roster.h>
-
-#include <fstream>
 
 #include "DeskbarView.h"
 
 extern const char* kSignature;
+const char* kDeskbarItemName = "Weather";
+
+const uint32 kRemoveReplicant = 'rmDb';
 
 BView* instantiate_deskbar_item()
 {
@@ -17,7 +20,7 @@ BView* instantiate_deskbar_item()
 
 DeskbarView::DeskbarView()
 	:
-	BView(BRect(0, 0, 15, 15), "weather", B_FOLLOW_ALL,
+	BView(BRect(0, 0, 15, 15), kDeskbarItemName, B_FOLLOW_ALL,
 		B_WILL_DRAW | B_FRAME_EVENTS)
 {
 }
@@ -65,10 +68,32 @@ void DeskbarView::Draw(BRect rect)
 }
 
 
+void DeskbarView::MessageReceived(BMessage* msg)
+{
+	switch (msg->what) {
+		case kRemoveReplicant:
+		{
+			BDeskbar deskbar;
+			deskbar.RemoveItem(kDeskbarItemName);
+			break;
+		}
+	}
+}
+
+
 void DeskbarView::MouseDown(BPoint point)
 {
-	std::ofstream of("/boot/home/debug.txt", std::ios_base::app);
-	of << "mouse down" << std::endl;
+	BPopUpMenu* menu = new BPopUpMenu(B_EMPTY_STRING, false, false);
+	menu->SetAsyncAutoDestruct(true);
+	menu->SetFont(be_plain_font);
+
+	menu->AddItem(new BMenuItem("Remove from deskbar",
+		new BMessage(kRemoveReplicant)));
+
+	menu->SetTargetForItems(this);
+
+	ConvertToScreen(&point);
+	menu->Go(point, true, true, true);
 }
 
 
