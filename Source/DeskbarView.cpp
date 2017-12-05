@@ -41,8 +41,14 @@ void DeskbarView::AddToDeskbar()
 
 void DeskbarView::AttachedToWindow()
 {
+	// set the appropriate background so that the transparency in the icon is
+	// displayed appropriately
+	AdoptParentColors();
+
+	// retrieve the application icon
 	entry_ref ref;
-	icon = new BBitmap(BRect(0, 0, B_MINI_ICON - 1, B_MINI_ICON - 1), B_CMAP8);
+	icon = new BBitmap(BRect(0, 0, B_MINI_ICON - 1, B_MINI_ICON - 1),
+		B_RGBA32);
 	be_roster->FindApp(kSignature, &ref);
 	BNode file(&ref);
 	BNodeInfo* info = new BNodeInfo(&file);
@@ -53,6 +59,7 @@ void DeskbarView::AttachedToWindow()
 
 void DeskbarView::Draw(BRect rect)
 {
+	// all we need to do is draw the icon
 	SetDrawingMode(B_OP_ALPHA);
 	DrawBitmap(icon);
 }
